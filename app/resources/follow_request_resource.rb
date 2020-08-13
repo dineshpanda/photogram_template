@@ -15,5 +15,4 @@ class FollowRequestResource < ApplicationResource
              resource: UserResource
 
   # Indirect associations
-
 end
