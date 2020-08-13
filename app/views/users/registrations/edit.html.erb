@@ -7,9 +7,7 @@
 
       <div class="card-body">
         <% was_validated = resource.errors.any? %>
-        <!-- Form html options start -->
         <% form_html_options = { method: :put, novalidate: true, class: "mb-3", multipart: true } %>
-        <!-- Form html options end -->
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: form_html_options) do |f| %>
 
           <% if flash[:notice].present? %>
@@ -147,7 +145,6 @@
           </div>
 
 
-          <!-- Devise Input for username start -->
           <div class="form-group">
             <% username_was_invalid = resource.errors.include?(:username) %>
 
@@ -173,9 +170,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for username end -->
 
-          <!-- Devise Input for fname start -->
           <div class="form-group">
             <% fname_was_invalid = resource.errors.include?(:fname) %>
 
@@ -201,9 +196,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for fname end -->
 
-          <!-- Devise Input for lname start -->
           <div class="form-group">
             <% lname_was_invalid = resource.errors.include?(:lname) %>
 
@@ -229,9 +222,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for lname end -->
 
-          <!-- Devise Input for image start -->
           <div class="form-group">
             <% image_was_invalid = resource.errors.include?(:image) %>
 
@@ -257,7 +248,6 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for image end -->
           <%= f.submit "Update", class: "btn btn-block btn-outline-primary" %>
         <% end %>
 
