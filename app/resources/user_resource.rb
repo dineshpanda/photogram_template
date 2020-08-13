@@ -11,6 +11,9 @@ class UserResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :comments,
+             foreign_key: :commenter_id
+
   has_many   :likes
 
   # Indirect associations
